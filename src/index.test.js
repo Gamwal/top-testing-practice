@@ -49,3 +49,7 @@ test("Generates Caesar Cipher", () => {
 test("Generates Caesar Cipher", () => {
   expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
 });
+
+test("Generates Caesar Cipher", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
