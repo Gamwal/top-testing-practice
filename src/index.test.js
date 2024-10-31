@@ -1,4 +1,10 @@
-const { capitalize, reverseString, calculator } = require("./index");
+const { experiments } = require("webpack");
+const {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+} = require("./index");
 
 test("Captializes first letter", () => {
   expect(capitalize("gates")).toBe("Gates");
@@ -30,4 +36,16 @@ test("Calculates quotient", () => {
 
 test("Calculates product", () => {
   expect(calculator.multiply(5, 3)).toBe(15);
+});
+
+test("Generates Caesar Cipher", () => {
+  expect(caesarCipher("xyz", 3)).toBe("abc");
+});
+
+test("Generates Caesar Cipher", () => {
+  expect(caesarCipher("XYZ", 3)).toBe("ABC");
+});
+
+test("Generates Caesar Cipher", () => {
+  expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
 });
